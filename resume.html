@@ -3,69 +3,105 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CV - Ricardo Gutierrez Juarez</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Portafolio de IA, robótica y software — proyectos con ROS 2, visión computacional, LLMs y Linux/Yocto.">
+<meta name="keywords" content="Ricardo Gutierrez, robótica, IA, visión computacional, ROS2, Yocto, FPGA, Kria, DevSecAI, LLM-COM">
+<meta name="author" content="Ricardo Gutierrez Juarez">
+<title>CV – Ricardo Gutierrez Juarez</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <script src="js/lang.js"></script>
 </head>
 <body>
-  <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
+  <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-dark">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">Ricardo Gutierrez Juarez</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html#about" data-i18n="nav.about">Sobre mí</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#projects" data-i18n="nav.projects">Proyectos</a></li>
+        <li class="nav-item"><a class="nav-link" href="resume.html" data-i18n="nav.cv">CV</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog/index.html" data-i18n="nav.blog">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html" data-i18n="nav.contact">Contacto</a></li>
+      <li class="nav-item"><button id="langToggle" class="btn btn-sm btn-outline-light ms-2">EN</button></li></ul>
+    </div>
+  </div>
+</nav>
+
+  <main class="section">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">Ricardo Gutierrez Juarez</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#about">Sobre mí</a></li>
-          <li class="nav-item"><a class="nav-link active" href="resume.html">CV</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <section id="experience" class="section">
-    <div class="container" data-aos="fade-up">
-      <h2 class="section-title">Experiencia Profesional</h2>
-      <div class="timeline">
-        <div class="timeline-item" data-aos="fade-right">
-          <span class="timeline-year">2023 - Presente</span>
-          <h5>Ingeniero en Robótica y Sistemas Digitales.</h5>
-          <p>Desarrollo de sistemas distribuidos y microservicios escalables.</p>
+      <div class="row">
+        <div class="col-lg-4" data-aos="fade-right">
+          <div class="d-flex gap-2 mb-3" id="cvActions"><a class="btn btn-primary btn-sm" href="assets/cv/Ricardo_Gutierrez_CV.pdf" download data-i18n="resume.download">Descargar CV (PDF)</a><button class="btn btn-outline-secondary btn-sm" onclick="window.print()" data-i18n="resume.print">Imprimir / Guardar PDF</button></div><div class="card p-3 mb-4">
+            <h4 class="mb-0">Ricardo Gutierrez Juarez</h4>
+            <small>Ingeniería en Robótica y Sistemas Digitales (7º)</small>
+            <hr>
+            <p class="mb-1"><i class="bi bi-geo-alt"></i> Guadalajara, México</p>
+            <p class="mb-1"><i class="bi bi-envelope"></i> Contacto vía formulario</p>
+          </div>
+          <div class="card p-3 mb-4">
+            <h5>Habilidades</h5>
+            <ul class="mb-0">
+              <li>Python, C/C++, Bash, JS</li>
+              <li>ROS 2, OpenCV, YOLO/Whisper</li>
+              <li>Docker, Yocto, Linux</li>
+              <li>Git, CI/CD</li>
+            </ul>
+          </div>
+          <div class="card p-3 mb-4">
+            <h5>Idiomas</h5>
+            <ul class="mb-0">
+              <li>Español (nativo)</li>
+              <li>Inglés (técnico)</li>
+            </ul>
+          </div>
         </div>
-        <!-- Más ítems -->
-      </div>
-    </div>
-  </section>
-
-  <section id="education" class="section bg-light">
-    <div class="container" data-aos="fade-up">
-      <h2 class="section-title">Educación</h2>
-      <div class="row justify-content-center">
-        <div class="col-md-8">
-          <ul class="list-unstyled">
-            <li class="mb-4">
-              <h5>ITESM Guadalajara <small>2019 - 2026</small></h5>
-              <p>Ingeniería en Robótica y Sistemas Digitales.</p>
-            </li>
+        <div class="col-lg-8" data-aos="fade-left">
+          <h3 class="mb-3" data-i18n="resume.profile">Perfil</h3>
+          <p><span data-i18n="resume.profile.text">Enfocado en sistemas integrales de IA y robótica: desde firmware/control, hasta visión y despliegue en dispositivos embebidos. Me gusta documentar y automatizar.</span></p>
+          <h3 class="mt-4 mb-3" data-i18n="resume.experience">Experiencia y proyectos</h3>
+          <ul>
+            <li><strong>LLM-COM</strong>: coordinación distribuida de LLMs con agentes y trazabilidad.</li>
+            <li><strong>DevSecAI Linux</strong>: distro para dev, ciberseguridad e IA basada en Yocto.</li>
+            <li><strong>Agriculture SAGE Robot</strong>: arquitectura distribuida con IA para cultivos.</li>
+            <li><strong>Asistente en tiempo real</strong>: visión, STT/TTS y LLM para atención a clientes.</li>
+            <li><strong>Robot autónomo de almacén (ROS 2)</strong>: SLAM y localización de objetos.</li>
           </ul>
+          <h3 class="mt-4 mb-3" data-i18n="resume.education">Educación</h3>
+          <p>Ingeniería en Robótica y Sistemas Digitales – en curso.</p>
         </div>
       </div>
     </div>
-  </section>
+  </main>
 
-  <footer class="footer text-center text-white py-4">
-    <div class="container">
-      <p>© 2025 Ricardo Gutierrez Juarez</p>
+  <footer class="footer text-center text-white py-5">
+  <div class="container">
+    <div class="social-links mb-3">
+      <a href="#" aria-label="GitHub"><i class="bi bi-github"></i></a>
+      <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+      <a href="contact.html" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
     </div>
-  </footer>
+    © 2025 Ricardo Gutierrez Juarez
+  </div>
+</footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="js/main.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      var hero = document.getElementById('hero');
+      var nb = document.getElementById('navbar');
+      if(nb && !hero){ nb.classList.add('scrolled'); }
+    });
+  </script>
+
 </body>
 </html>
