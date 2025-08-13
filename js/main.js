@@ -68,3 +68,24 @@ function handleContactForm(){
   }catch(e){ console.error(e); }
 }
 document.addEventListener('DOMContentLoaded', handleContactForm);
+
+// WhatsApp: construye el enlace según idioma
+(function(){
+  function updateWhatsAppLink(){
+    const el = document.getElementById('whatsapp-float');
+    if(!el || !window.SITE_CONFIG || !SITE_CONFIG.whatsapp) return;
+    const phone = (SITE_CONFIG.whatsapp.phone || '').replace(/\D/g,'');
+    const lang = (window.i18n && i18n.lang) || 'es';
+    const msg = lang === 'en' ? SITE_CONFIG.whatsapp.text_en : SITE_CONFIG.whatsapp.text_es;
+    el.href = `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`;
+  }
+  document.addEventListener('DOMContentLoaded', updateWhatsAppLink);
+  // Si usas el toggle ES/EN, actualiza después del click
+  document.addEventListener('click', (e)=>{
+    if(e.target && e.target.id === 'langToggle'){
+      setTimeout(updateWhatsAppLink, 0);
+    }
+  });
+  // Exponer por si quieres llamarlo manualmente
+  window.updateWhatsAppLink = updateWhatsAppLink;
+})();
